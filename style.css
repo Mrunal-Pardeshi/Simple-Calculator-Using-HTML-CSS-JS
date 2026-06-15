@@ -100,3 +100,71 @@ button:hover {
 #clear:hover {
     background-color: #390303;
 }
+
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #display {
+        width: 300px;
+    }
+
+    button {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* Large Mobile */
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .calculator {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #display {
+        width: 260px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+
+    #display {
+        width: 220px;
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+}
