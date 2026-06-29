@@ -1,170 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
+    min-height: 100vh;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #669bbc;
+    align-items: center;
+    padding: 20px;
 }
 
 .title {
-    margin: 25px 0px 0px 0px;
-    padding: 20px;
-    font-size: xx-large;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .title h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .calculator {
-    margin: 10px 50px;
-    padding: 15px;
-    background-color: #003049;
-    width: auto;
-    border-radius: 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 15px 15px 15px #011e2d;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 #display {
-    margin: 25px 10px 10px 10px;
-    padding: 10px 15px;
-    height: 45px;
     width: 100%;
-    max-width: 345px;
-    box-sizing: border-box;
-    border-radius: 40px;
+    height: 70px;
     border: none;
-    font-size: xx-large;
+    outline: none;
+    border-radius: 12px;
+    background: #0f172a;
+    color: white;
+    margin-bottom: 20px;
+    padding: 15px;
     text-align: right;
+    font-size: 2rem;
 }
-
-h1 {
-    color: #c62946;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    margin: 20px;
+    width: 100%;
 }
 
 button {
-    height: 75px;
-    width: 75px;
-    border-radius: 40px;
-    font-size: x-large;
-    font-weight: bold;
-    background-color: #fdf0d5;
+    height: 70px;
+    width: 100%;
+    aspect-ratio: 1;
     border: none;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
     cursor: pointer;
+    background: #334155;
+    color: white;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #fad487;
+    background: #475569;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 #equals {
-    background-color: #c1121f;
-    color: beige;
+    background: #2563eb;
+    color: white;
 }
 
 #equals:hover {
-    background-color: #64080e;
+    background: #1d4ed8;
 }
 
 #clear {
-    background-color: #780000;
-    color: beige;
-    width: auto;
     grid-column: span 4;
+    background: #dc2626;
+    color: white;
 }
 
 #clear:hover {
-    background-color: #390303;
+    background: #b91c1c;
 }
 
+@media(max-width:500px) {
 
-/* Tablets */
-@media (max-width: 768px) {
-
-    .title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    #display {
-        width: 300px;
-    }
-
-    button {
-        width: 65px;
-        height: 65px;
-    }
-}
-
-/* Large Mobile */
-@media (max-width: 480px) {
-
-    .title {
-        font-size: 1.5rem;
-        text-align: center;
+    .title h1 {
+        font-size: 1.4rem;
     }
 
     .calculator {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    #display {
-        width: 260px;
-        height: 40px;
-        font-size: 1.8rem;
-    }
-
-    button {
-        width: 55px;
-        height: 55px;
-        font-size: 1.2rem;
+        width: 100%;
+        max-width: 340px;
     }
 
     .buttons {
-        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
     }
-}
 
-/* Small Mobile */
-@media (max-width: 360px) {
+    button {
+        width: 100%;
+        aspect-ratio: 1;
+    }
 
     #display {
-        width: 220px;
         font-size: 1.5rem;
-    }
-
-    button {
-        width: 45px;
-        height: 45px;
-        font-size: 1rem;
-    }
-
-    .buttons {
-        gap: 8px;
+        height: 60px;
     }
 }
